@@ -1,0 +1,29 @@
+.register-cta {
+  background: var(--color-cream);
+  padding: var(--space-xl) 0;
+}
+
+.register-cta__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-lg);
+  flex-wrap: wrap;
+}
+
+.register-cta__heading {
+  margin-bottom: var(--space-xs);
+}
+
+.register-cta__subheading {
+  color: var(--color-muted);
+  margin: 0;
+  max-width: 480px;
+}
+
+@media (max-width: 640px) {
+  .register-cta__inner {
+    text-align: center;
+    justify-content: center;
+  }
+}
