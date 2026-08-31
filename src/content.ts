@@ -7,36 +7,46 @@
 //
 // UPDATE (31 Aug 2026): pulled confirmed facts from your official PropNex
 // microsite (https://lucernegrand-96797083.propnex.net/) — district,
-// developer, tenure, unit count, and TOP are now real. Unit pricing, floor
-// plans, and the pricelist are STILL NOT public even on that official
-// site — they're gated behind its own "Early Access" lead form, same as
-// this site. You'll need to pull those from your PropNex agent
-// backend/developer directly, not from the public microsite.
+// developer, tenure, and MRT/school proximity are real.
+//
+// UPDATE (31 Aug 2026, later): Jennifer supplied the developer's architect
+// brief, which she confirmed is MORE ACCURATE than the public microsite —
+// used to correct unit count (570, not 575) and completion date (Vacant
+// Possession Dec 2031, not the public site's "2029"). NOTE: that brief is
+// watermarked "strictly private and confidential — not for circulation and
+// sales purposes." The exact unit-type/size/count breakdown from it has
+// deliberately NOT been published here yet — only already-public categories
+// of info (total units, tenure, completion window) were corrected. See
+// unitTypes below and the project doc for the full breakdown, pending
+// Jennifer's go-ahead on what's cleared to publish pre-launch.
+//
+// Unit pricing (exact quantum) and the pricelist are still not public.
+// Jennifer confirmed an indicative PSF-from figure to use in the meantime.
 // ============================================================================
 
 export const project = {
   name: "Lucerne Grand", // confirmed — matches official PropNex microsite
-  tagline: "A new address for those who've already arrived.", // PLACEHOLDER — still yours to write
+  tagline: "200m from Lakeside MRT. A lifetime by the water.", // confirmed — chosen by Jennifer, 31 Aug 2026
   developer: "City Developments Limited", // confirmed (CDL)
   developerCredibility:
-    "Developed by City Developments Limited (CDL), one of Singapore's largest listed property developers.", // factual/minimal — expand with specific track record details if you want more
+    "Developed by CDL Polaris Properties Pte Ltd, a wholly owned subsidiary of City Developments Limited (CDL) — one of Singapore's most established developers, with over 60 years of experience and a portfolio spanning Singapore and other countries. Lucerne Grand is designed by ADDP Architects LLP and built by United Tec Construction Pte Ltd, and has achieved BCA's Green Mark Platinum Super Low Energy (SLE) certification.", // confirmed — architect brief (consultant names, certification, CDL track record are standard project-info disclosures, not the confidential unit-mix data)
   district: "D22 – Jurong (Lakeside Drive)", // confirmed
   nearestMRT: "Lakeside MRT (200m walk)", // confirmed
   travelTimes: [
-    { destination: "Raffles Place / CBD", time: "XX min" }, // PLACEHOLDER — not published on official microsite either
-    { destination: "Orchard Road", time: "XX min" }, // PLACEHOLDER
-    { destination: "Changi Airport", time: "XX min" }, // PLACEHOLDER
+    { destination: "Raffles Place / CBD", time: "To be confirmed" }, // still not published anywhere — swap for a real drive/PT time when you have it
+    { destination: "Orchard Road", time: "To be confirmed" },
+    { destination: "Changi Airport", time: "To be confirmed" },
   ],
-  tenure: "99 Years", // confirmed
-  possessionTimeline: "Expected TOP: 2029", // confirmed
+  tenure: "99 Years, from 8 September 2025", // confirmed — architect brief (more accurate than public microsite)
+  possessionTimeline: "Expected Vacant Possession: December 2031", // corrected — architect brief supersedes public microsite's "2029" estimate
   previewDate: "18 September 2026", // matches official site's "Target Preview Date: Q3 2026"
   launchDate: "3 October 2026",
 };
 
 export const heroStats = [
-  { value: "575", label: "total housing units" }, // confirmed — replaces old unverified "500+ buyers" stat
+  { value: "570", label: "total housing units" }, // corrected — architect brief (more accurate than public microsite's 575)
   { value: "99", label: "years tenure" }, // confirmed
-  { value: "2029", label: "expected TOP" }, // confirmed
+  { value: "2031", label: "expected completion" }, // corrected — architect brief's Vacant Possession date (Dec 2031), supersedes public microsite's "2029"
 ];
 
 export type UnitType = {
@@ -45,62 +55,84 @@ export type UnitType = {
   priceFrom: string;
 };
 
-// Still placeholder — not public even on the official PropNex microsite.
-// Pull from your agent backend once available.
+// Pricing: Jennifer confirmed indicative PSF pricing (31 Aug 2026) — official
+// quantum not released yet, so this is deliberately a PSF-from figure, not a
+// per-unit price.
+//
+// Unit types/sizes: sourced from the developer's architect brief (confirmed
+// by Jennifer as the more accurate source, 31 Aug 2026). That brief is
+// marked "not for circulation" pre-launch, so per Jennifer's instruction
+// these are shown on-site as blurred/watermarked draft layouts with a
+// "Contact Agent for Latest Layout" CTA (see FloorPlans.tsx) rather than
+// published as final confirmed detail. Unit counts/% mix are deliberately
+// NOT included here — only type, indicative size range, and PSF-from price.
 export const unitTypes: UnitType[] = [
-  { type: "1 Bedroom", sizeSqft: "XXX – XXX sqft", priceFrom: "From $X.XXM" }, // PLACEHOLDER
-  { type: "2 Bedroom", sizeSqft: "XXX – XXX sqft", priceFrom: "From $X.XXM" }, // PLACEHOLDER
-  { type: "3 Bedroom", sizeSqft: "XXX – XXX sqft", priceFrom: "From $X.XXM" }, // PLACEHOLDER
-  { type: "4 Bedroom", sizeSqft: "XXX – XXX sqft", priceFrom: "From $X.XXM" }, // PLACEHOLDER
+  { type: "2 Bedroom", sizeSqft: "624 sqft", priceFrom: "From $2,xxx psf" },
+  { type: "2 Bedroom + Study", sizeSqft: "667 – 710 sqft", priceFrom: "From $2,xxx psf" },
+  { type: "3 Bedroom", sizeSqft: "872 – 904 sqft", priceFrom: "From $2,xxx psf" },
+  { type: "3 Bedroom Premium + Study", sizeSqft: "947 – 1,001 sqft", priceFrom: "From $2,xxx psf" },
+  { type: "4 Bedroom Premium", sizeSqft: "1,152 – 1,195 sqft", priceFrom: "From $2,xxx psf" },
+  { type: "4 Bedroom Premium + Study", sizeSqft: "1,345 sqft", priceFrom: "From $2,xxx psf" },
+  { type: "4 Bedroom Premium + Entertainment", sizeSqft: "1,432 sqft", priceFrom: "From $2,xxx psf" },
 ];
 
+// Made launch-safe (31 Aug 2026): swapped raw "PLACEHOLDER" text (which
+// would have shown as-is to real site visitors) for an honest holding line
+// that still drives to contact. Replace with the real schedule once
+// confirmed with the developer/sales team.
 export const paymentTerms = [
-  "PLACEHOLDER — e.g. Booking fee: 5% on Option to Purchase",
-  "PLACEHOLDER — e.g. Progressive payment scheme under Housing Developers Rules",
-  "PLACEHOLDER — confirm with developer/sales team before publishing",
+  "Full payment schedule will be shared during registration — contact us for the latest details.",
 ];
 
+// Replaced 31 Aug 2026 with the real facility names from the developer's
+// architect brief (Jennifer: "Replace. No need to be gated" — unlike the
+// unit floor plans, these facility names are treated as standard project
+// info, published outright).
 export const amenities: string[] = [
-  "50m Lap Pool", // PLACEHOLDER
-  "Gymnasium", // PLACEHOLDER
-  "Function Room", // PLACEHOLDER
-  "Concierge Service", // PLACEHOLDER
-  "Landscaped Gardens", // PLACEHOLDER
-  "Children's Playground", // PLACEHOLDER
-  "BBQ Pavilions", // PLACEHOLDER
-  "24-hr Security", // PLACEHOLDER
+  "Lap Pool & Aqua Lounge (with Spa Cove)", // confirmed — architect brief
+  "Club Lucerne (Clubhouse)", // confirmed — architect brief
+  "Kids Splash Pool", // confirmed — architect brief
+  "Gourmet Pavilions", // confirmed — architect brief
+  "Multi-Purpose Court", // confirmed — architect brief
+  "Outdoor Fitness Area", // confirmed — architect brief
+  "Wellness Garden", // confirmed — architect brief
+  "Pets Garden", // confirmed — architect brief
+  "Community Plaza", // confirmed — architect brief
+  "Co-working Lounge", // confirmed — architect brief
+  "Gymnasium", // confirmed — architect brief (previously an unconfirmed guess)
+  "Concierge / Reception", // confirmed — visible in developer renderings
+  "Landscaped Gardens & Riverside Promenade", // confirmed — visible in developer renderings
+  "Ground-Floor Retail & F&B — Lucerne Galleria (incl. supermarket)", // confirmed — architect brief + renderings
 ];
 
 export type WhyPoint = { title: string; description: string };
 
+// Trimmed to only confirmed points for launch (31 Aug 2026) — the "Entry
+// pricing vs. surrounding projects" and "Timing" cards were pure PLACEHOLDER
+// copy that would have shown unfinished text to real visitors. Add them
+// back once you have real PSF comparisons and a timing story to tell.
 export const whyChoose: WhyPoint[] = [
   {
-    title: "Location advantage", // PLACEHOLDER
+    title: "Location advantage", // confirmed — from official microsite data
     description:
-      "PLACEHOLDER — what makes this location stand out vs. surrounding projects (MRT access, upcoming developments, school proximity).",
+      "A 200m walk to Lakeside MRT (East West Line), with Yuan Ching Secondary School just 110m away and three primary schools within 550m — a rare combination of transit and school proximity for an OCR new launch.",
   },
   {
-    title: "Entry pricing vs. surrounding projects", // PLACEHOLDER
+    title: "Developer track record", // confirmed — architect brief
     description:
-      "PLACEHOLDER — PSF comparison against nearby resale/new launch projects, once pricing is confirmed.",
-  },
-  {
-    title: "Developer track record", // PLACEHOLDER
-    description: "PLACEHOLDER — completed projects, build quality, delivery history.",
-  },
-  {
-    title: "Timing", // PLACEHOLDER
-    description:
-      "PLACEHOLDER — why now (e.g. upcoming rezoning, MRT line completion, limited nearby land supply).",
+      "CDL has been developing homes in Singapore for over 60 years, with a portfolio that extends beyond Singapore as well. Lucerne Grand is designed by ADDP Architects LLP, fitted with appliances from established brands including Bosch, Samsung, Hansgrohe, Geberit and Franke, and has achieved BCA's Green Mark Platinum Super Low Energy (SLE) certification for building energy efficiency.",
   },
 ];
 
 export type Faq = { q: string; a: string };
 
+// NOTE (dev-only, not shown on-site): have the financing/HDB-timing answers
+// below reviewed before treating them as final — avoid stating specific
+// TDSR/LTV/ABSD figures without verifying current MAS/IRAS rules.
 export const faqs: Faq[] = [
   {
     q: "What is the expected TOP (Temporary Occupation Permit) date?",
-    a: "Estimated 2029.", // confirmed via official microsite
+    a: "Expected Vacant Possession is December 2031, per the developer's project brief (TOP typically falls a few months ahead of Vacant Possession — exact TOP date not yet stated).", // corrected — architect brief supersedes the public microsite's earlier "2029" estimate
   },
   {
     q: "What is the tenure of Lucerne Grand?",
@@ -108,11 +140,11 @@ export const faqs: Faq[] = [
   },
   {
     q: "What financing options are available?",
-    a: "PLACEHOLDER — outline progressive payment scheme, loan quantum guidance (do not state specific TDSR/LTV figures without verifying against current MAS rules).",
+    a: "Financing details, including the progressive payment schedule, will be shared closer to preview. Contact us directly for guidance on loan quantum and TDSR/MSR — this depends on your individual financial situation and current MAS rules.", // made launch-safe 31 Aug 2026 — do not state specific TDSR/LTV figures without verifying against current MAS rules
   },
   {
     q: "Can HDB owners buy before selling their flat?",
-    a: "PLACEHOLDER — general guidance only; recommend readers confirm their specific eligibility and timeline (e.g. ABSD implications) with their agent before committing.",
+    a: "It depends on your specific eligibility and timeline, including any ABSD implications. Contact us directly and we'll walk through your options before you commit to anything.", // made launch-safe 31 Aug 2026
   },
   {
     q: "Which MRT lines and schools are nearby?",
@@ -125,9 +157,9 @@ export const faqs: Faq[] = [
 ];
 
 export const salesOffice = {
-  address: "PLACEHOLDER — sales gallery address",
-  hours: "PLACEHOLDER — e.g. Daily, 10am – 7pm",
-  phone: "PLACEHOLDER",
+  address: "To be announced — contact us for the latest showflat details.", // made launch-safe 31 Aug 2026; swap for the real address once confirmed
+  hours: "To be announced.",
+  phone: "+65 9679 7083", // confirmed — Lucerne Grand marketing team hotline, from official microsite
   agentName: "Jennifer Wong",
   agentBrand: "@ImJen.Wong",
   agentEmail: "jenniferWong.YL@propnex.com",

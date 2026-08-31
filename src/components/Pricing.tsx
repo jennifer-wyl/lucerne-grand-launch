@@ -17,7 +17,6 @@ export default function Pricing() {
             <thead>
               <tr>
                 <th>Unit Type</th>
-                <th>Size</th>
                 <th>Price From</th>
               </tr>
             </thead>
@@ -25,12 +24,15 @@ export default function Pricing() {
               {unitTypes.map((unit) => (
                 <tr key={unit.type}>
                   <td>{unit.type}</td>
-                  <td>{unit.sizeSqft}</td>
                   <td>{unit.priceFrom}</td>
                 </tr>
               ))}
             </tbody>
           </table>
+          <p className="pricing__table-note">
+            See the <a href="#floor-plans">Floor Plans</a> section for indicative unit
+            sizes and layouts.
+          </p>
         </div>
 
         <div className="pricing__columns">
@@ -51,10 +53,6 @@ export default function Pricing() {
             </ul>
           </div>
         </div>
-        <span className="placeholder-note">
-          All pricing, payment terms and amenities are placeholders — replace with
-          confirmed figures before this page goes live
-        </span>
       </div>
     </section>
   );

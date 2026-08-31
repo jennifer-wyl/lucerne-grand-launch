@@ -35,6 +35,16 @@
   font-weight: 600;
 }
 
+.pricing__table-note {
+  margin-top: var(--space-sm);
+  font-size: 0.85rem;
+  color: var(--color-muted);
+}
+
+.pricing__table-note a {
+  color: var(--color-gold);
+}
+
 .pricing__columns {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));

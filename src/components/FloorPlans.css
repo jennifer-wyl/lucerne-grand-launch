@@ -19,28 +19,75 @@
   border-radius: var(--radius-md);
   padding: var(--space-md);
   border: 1px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
 }
 
 .floor-plans__thumb {
+  position: relative;
   height: 140px;
-  background: repeating-linear-gradient(
-    45deg,
-    #eceeec,
-    #eceeec 10px,
-    #e2e4e1 10px,
-    #e2e4e1 20px
-  );
   border-radius: var(--radius-sm);
+  overflow: hidden;
+  margin-bottom: var(--space-sm);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--color-muted);
-  font-size: 0.8rem;
-  margin-bottom: var(--space-sm);
+  background: #eceeec;
+}
+
+.floor-plans__sketch {
+  position: absolute;
+  inset: 0;
+  filter: blur(3px);
+}
+
+.floor-plans__room {
+  position: absolute;
+  border: 2px solid var(--color-navy);
+  background: rgba(68, 84, 104, 0.1);
+  border-radius: 2px;
+}
+
+.floor-plans__room--a {
+  top: 12%;
+  left: 8%;
+  width: 42%;
+  height: 58%;
+}
+
+.floor-plans__room--b {
+  top: 12%;
+  right: 8%;
+  width: 32%;
+  height: 34%;
+}
+
+.floor-plans__room--c {
+  bottom: 12%;
+  right: 8%;
+  width: 32%;
+  height: 30%;
+}
+
+.floor-plans__watermark {
+  position: relative;
+  z-index: 1;
+  font-family: var(--font-body);
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(46, 51, 56, 0.6);
+  border: 2px solid rgba(46, 51, 56, 0.45);
+  padding: 0.2rem 0.9rem;
+  transform: rotate(-16deg);
+  background: rgba(240, 241, 238, 0.6);
+  border-radius: 3px;
+  pointer-events: none;
 }
 
 .floor-plans__card h3 {
-  font-size: 1.05rem;
+  font-size: 1.02rem;
   margin-bottom: 0.2rem;
 }
 
@@ -53,5 +100,21 @@
 .floor-plans__price {
   color: var(--color-navy);
   font-weight: 600;
-  margin: 0;
+  margin: 0 0 var(--space-sm);
+}
+
+.floor-plans__cta {
+  margin-top: auto;
+  align-self: flex-start;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-gold);
+  text-decoration: none;
+  border-bottom: 1px solid var(--color-gold);
+  padding-bottom: 1px;
+}
+
+.floor-plans__cta:hover {
+  color: var(--color-navy);
+  border-color: var(--color-navy);
 }

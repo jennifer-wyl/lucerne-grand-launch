@@ -2,14 +2,10 @@
   padding-top: var(--space-2xl);
   padding-bottom: var(--space-2xl);
   background:
-    linear-gradient(rgba(68, 84, 104, 0.82), rgba(46, 51, 56, 0.88)),
-    repeating-linear-gradient(
-      135deg,
-      #3a4753,
-      #3a4753 2px,
-      #333e48 2px,
-      #333e48 40px
-    );
+    linear-gradient(rgba(46, 51, 56, 0.55), rgba(46, 51, 56, 0.82)),
+    var(--hero-image);
+  background-size: cover;
+  background-position: center;
   color: var(--color-white);
   text-align: center;
 }

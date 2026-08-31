@@ -20,6 +20,15 @@ export default function Footer() {
           <p>
             <a href={`mailto:${salesOffice.agentEmail}`}>{salesOffice.agentEmail}</a>
           </p>
+          <p>
+            <a
+              href={`https://api.whatsapp.com/send?phone=65${salesOffice.phone.replace(/\D/g, "").slice(-8)}&text=Hi%2C%20I%20would%20like%20to%20know%20about%20${encodeURIComponent(project.name)}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              WhatsApp Us
+            </a>
+          </p>
         </div>
 
         <div>

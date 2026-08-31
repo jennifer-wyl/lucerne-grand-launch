@@ -43,11 +43,13 @@ export default function Highlights() {
           </ul>
         </div>
 
-        <div className="highlights__map-placeholder">
-          <span>Location map placeholder</span>
-          <span className="placeholder-note">
-            Swap in embedded map or neighborhood image once available
-          </span>
+        <div className="highlights__map">
+          <iframe
+            title="Lucerne Grand location map"
+            src="https://www.google.com/maps?q=Lakeside+MRT+Station+Singapore&output=embed"
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          />
         </div>
       </div>
     </section>

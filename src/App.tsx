@@ -1,6 +1,7 @@
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import Highlights from "./components/Highlights";
+import Gallery from "./components/Gallery";
 import FloorPlans from "./components/FloorPlans";
 import RegisterCta from "./components/RegisterCta";
 import Pricing from "./components/Pricing";
@@ -15,6 +16,7 @@ function App() {
       <main>
         <Hero />
         <Highlights />
+        <Gallery />
         <FloorPlans />
         <RegisterCta
           heading="Join the VIP preview list"

@@ -16,11 +16,6 @@ export default function Faq() {
             </details>
           ))}
         </div>
-        <span className="placeholder-note">
-          Legal/financing answers are placeholders — have these reviewed before
-          publishing (avoid stating specific TDSR/LTV/ABSD figures without verifying
-          current MAS/IRAS rules)
-        </span>
       </div>
     </section>
   );

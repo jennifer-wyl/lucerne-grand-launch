@@ -11,6 +11,7 @@ export default function Header() {
         </a>
         <nav className="site-header__nav" aria-label="Primary">
           <a href="#highlights">Highlights</a>
+          <a href="#gallery">Gallery</a>
           <a href="#floor-plans">Floor Plans</a>
           <a href="#why">Why Lucerne Grand</a>
           <a href="#faq">FAQ</a>

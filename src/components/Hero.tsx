@@ -1,10 +1,14 @@
+import type { CSSProperties } from "react";
 import { project, heroStats } from "../content";
 import { GOOGLE_FORM_URL } from "../config";
+import heroImage from "../assets/renders/overall-exterior.jpg";
 import "./Hero.css";
 
 export default function Hero() {
+  const heroStyle = { "--hero-image": `url(${heroImage})` } as CSSProperties;
+
   return (
-    <section id="top" className="hero">
+    <section id="top" className="hero" style={heroStyle}>
       <div className="container hero__inner">
         <span className="section-label">New Launch · {project.district}</span>
         <h1 className="hero__headline">{project.name}</h1>
@@ -38,9 +42,6 @@ export default function Hero() {
             </div>
           ))}
         </div>
-        <span className="placeholder-note">
-          Hero image placeholder — swap in developer-supplied exterior rendering
-        </span>
       </div>
     </section>
   );
