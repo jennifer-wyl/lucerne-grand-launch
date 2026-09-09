@@ -53,6 +53,7 @@ export type UnitType = {
   type: string;
   sizeSqft: string;
   priceFrom: string;
+  floorPlanImage?: string; // real developer drawing (shown blurred+watermarked) — omit to fall back to the abstract sketch
 };
 
 // Pricing: Jennifer confirmed indicative PSF pricing (31 Aug 2026) — official
@@ -66,14 +67,17 @@ export type UnitType = {
 // "Contact Agent for Latest Layout" CTA (see FloorPlans.tsx) rather than
 // published as final confirmed detail. Unit counts/% mix are deliberately
 // NOT included here — only type, indicative size range, and PSF-from price.
+// All 7 types now use the real developer floor plan drawing (watermarked
+// "Draft" in FloorPlans.tsx, no blur — Jennifer, 9 Sept 2026: "no need to
+// blur out all the room image, the watermark DRAFT is sufficient").
 export const unitTypes: UnitType[] = [
-  { type: "2 Bedroom", sizeSqft: "624 sqft", priceFrom: "From $2,xxx psf" },
-  { type: "2 Bedroom + Study", sizeSqft: "667 – 710 sqft", priceFrom: "From $2,xxx psf" },
-  { type: "3 Bedroom", sizeSqft: "872 – 904 sqft", priceFrom: "From $2,xxx psf" },
-  { type: "3 Bedroom Premium + Study", sizeSqft: "947 – 1,001 sqft", priceFrom: "From $2,xxx psf" },
-  { type: "4 Bedroom Premium", sizeSqft: "1,152 – 1,195 sqft", priceFrom: "From $2,xxx psf" },
-  { type: "4 Bedroom Premium + Study", sizeSqft: "1,345 sqft", priceFrom: "From $2,xxx psf" },
-  { type: "4 Bedroom Premium + Entertainment", sizeSqft: "1,432 sqft", priceFrom: "From $2,xxx psf" },
+  { type: "2 Bedroom", sizeSqft: "624 sqft", priceFrom: "From $2,xxx psf", floorPlanImage: "2-bedroom.png" },
+  { type: "2 Bedroom + Study", sizeSqft: "667 – 710 sqft", priceFrom: "From $2,xxx psf", floorPlanImage: "2-bedroom-study.png" },
+  { type: "3 Bedroom", sizeSqft: "872 – 904 sqft", priceFrom: "From $2,xxx psf", floorPlanImage: "3-bedroom.png" },
+  { type: "3 Bedroom Premium + Study", sizeSqft: "947 – 1,001 sqft", priceFrom: "From $2,xxx psf", floorPlanImage: "3-bedroom-premium-study.png" },
+  { type: "4 Bedroom Premium", sizeSqft: "1,152 – 1,195 sqft", priceFrom: "From $2,xxx psf", floorPlanImage: "4-bedroom-premium.png" },
+  { type: "4 Bedroom Premium + Study", sizeSqft: "1,345 sqft", priceFrom: "From $2,xxx psf", floorPlanImage: "4-bedroom-premium-study.png" },
+  { type: "4 Bedroom Premium + Entertainment", sizeSqft: "1,432 sqft", priceFrom: "From $2,xxx psf", floorPlanImage: "4-bedroom-premium-entertainment.png" },
 ];
 
 // Made launch-safe (31 Aug 2026): swapped raw "PLACEHOLDER" text (which

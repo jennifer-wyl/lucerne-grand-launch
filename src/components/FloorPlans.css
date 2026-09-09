@@ -25,7 +25,7 @@
 
 .floor-plans__thumb {
   position: relative;
-  height: 140px;
+  height: 180px;
   border-radius: var(--radius-sm);
   overflow: hidden;
   margin-bottom: var(--space-sm);
@@ -39,6 +39,16 @@
   position: absolute;
   inset: 0;
   filter: blur(3px);
+}
+
+.floor-plans__image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: var(--space-sm);
+  background: var(--color-white);
 }
 
 .floor-plans__room {
@@ -77,11 +87,10 @@
   font-weight: 700;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: rgba(46, 51, 56, 0.6);
-  border: 2px solid rgba(46, 51, 56, 0.45);
+  color: rgba(46, 51, 56, 0.55);
   padding: 0.2rem 0.9rem;
   transform: rotate(-16deg);
-  background: rgba(240, 241, 238, 0.6);
+  background: rgba(240, 241, 238, 0.55);
   border-radius: 3px;
   pointer-events: none;
 }
@@ -105,16 +114,21 @@
 
 .floor-plans__cta {
   margin-top: auto;
-  align-self: flex-start;
+  align-self: stretch;
+  text-align: center;
   font-size: 0.85rem;
   font-weight: 600;
-  color: var(--color-gold);
+  color: var(--color-white);
   text-decoration: none;
-  border-bottom: 1px solid var(--color-gold);
-  padding-bottom: 1px;
+  background: var(--color-navy);
+  border: 1px solid var(--color-navy);
+  border-radius: var(--radius-sm);
+  padding: 0.55rem 0.9rem;
+  transition: background 0.15s ease, color 0.15s ease;
 }
 
 .floor-plans__cta:hover {
+  background: var(--color-gold);
+  border-color: var(--color-gold);
   color: var(--color-navy);
-  border-color: var(--color-navy);
 }
