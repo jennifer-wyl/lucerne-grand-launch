@@ -7,8 +7,8 @@ type Props = {
 };
 
 export default function RegisterCta({
-  heading = "Secure your preview slot",
-  subheading = "Register your interest and our team will be in touch with viewing details ahead of the official launch.",
+  heading = "Check what is still available",
+  subheading = "Leave your details and we will send the units still open and arrange a viewing.",
 }: Props) {
   return (
     <section className="register-cta">
@@ -23,7 +23,7 @@ export default function RegisterCta({
           rel="noopener noreferrer"
           className="btn btn-primary"
         >
-          Register Now
+          Check Availability
         </a>
       </div>
     </section>

@@ -2,6 +2,8 @@ import { project } from "../content";
 import "./Highlights.css";
 
 export default function Highlights() {
+  // Only show travel times that have a real value (see content.ts).
+  const travelTimes = project.travelTimes.filter((t) => t.time.trim() !== "");
   return (
     <section id="highlights" className="highlights">
       <div className="container">
@@ -31,17 +33,19 @@ export default function Highlights() {
           </div>
         </div>
 
-        <div className="highlights__travel">
-          <h3>Travel Times</h3>
-          <ul>
-            {project.travelTimes.map((t) => (
-              <li key={t.destination}>
-                <span>{t.destination}</span>
-                <span className="highlights__travel-time">{t.time}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
+        {travelTimes.length > 0 && (
+          <div className="highlights__travel">
+            <h3>Travel Times</h3>
+            <ul>
+              {travelTimes.map((t) => (
+                <li key={t.destination}>
+                  <span>{t.destination}</span>
+                  <span className="highlights__travel-time">{t.time}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
 
         <div className="highlights__map">
           <iframe

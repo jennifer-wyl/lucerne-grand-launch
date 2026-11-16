@@ -8,9 +8,9 @@ export default function Footer() {
       <div className="container site-footer__inner">
         <div>
           <h3>{project.name}</h3>
-          <p className="site-footer__muted">Sales Office</p>
+          <p className="site-footer__muted">Showflat</p>
           <p>{salesOffice.address}</p>
-          <p className="site-footer__muted">{salesOffice.hours}</p>
+          {salesOffice.hours && <p className="site-footer__muted">{salesOffice.hours}</p>}
         </div>
 
         <div>
@@ -32,9 +32,9 @@ export default function Footer() {
         </div>
 
         <div>
-          <h3>Registration</h3>
+          <h3>Availability</h3>
           <p className="site-footer__muted">
-            Get VIP preview access and project updates.
+            Ask which units are still available and arrange a viewing.
           </p>
           <a
             href={GOOGLE_FORM_URL}
@@ -42,7 +42,7 @@ export default function Footer() {
             rel="noopener noreferrer"
             className="btn btn-primary"
           >
-            Register Now
+            Check Availability
           </a>
         </div>
       </div>

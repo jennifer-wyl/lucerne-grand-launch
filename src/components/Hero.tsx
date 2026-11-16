@@ -10,15 +10,13 @@ export default function Hero() {
   return (
     <section id="top" className="hero" style={heroStyle}>
       <div className="container hero__inner">
-        <span className="section-label">New Launch · {project.district}</span>
+        <span className="section-label">Now selling · {project.district}</span>
         <h1 className="hero__headline">{project.name}</h1>
         <p className="hero__tagline">{project.tagline}</p>
 
-        <div className="hero__meta">
-          <span>Preview: {project.previewDate}</span>
-          <span className="hero__meta-divider">·</span>
-          <span>Official Launch: {project.launchDate}</span>
-        </div>
+        <p className="hero__meta">
+          {project.soldPercent} sold as at {project.soldAsAt}
+        </p>
 
         <div className="hero__actions">
           <a
@@ -27,7 +25,7 @@ export default function Hero() {
             rel="noopener noreferrer"
             className="btn btn-primary"
           >
-            Register for Preview
+            Check Availability
           </a>
           <a href="#highlights" className="btn btn-secondary">
             Explore the Project

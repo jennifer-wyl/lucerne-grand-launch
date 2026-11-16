@@ -22,7 +22,7 @@ export default function Header() {
           rel="noopener noreferrer"
           className="btn btn-primary site-header__cta"
         >
-          Register for Preview
+          Check Availability
         </a>
       </div>
     </header>

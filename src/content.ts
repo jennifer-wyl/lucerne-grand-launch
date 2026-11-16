@@ -32,15 +32,21 @@ export const project = {
     "Developed by CDL Polaris Properties Pte Ltd, a wholly owned subsidiary of City Developments Limited (CDL) — one of Singapore's most established developers, with over 60 years of experience and a portfolio spanning Singapore and other countries. Lucerne Grand is designed by ADDP Architects LLP and built by United Tec Construction Pte Ltd, and has achieved BCA's Green Mark Platinum Super Low Energy (SLE) certification.", // confirmed — architect brief (consultant names, certification, CDL track record are standard project-info disclosures, not the confidential unit-mix data)
   district: "D22 – Jurong (Lakeside Drive)", // confirmed
   nearestMRT: "Lakeside MRT (200m walk)", // confirmed
+  // Rows with an empty time are hidden on-site (Highlights.tsx), and the whole
+  // Travel Times block is hidden when every row is empty. Fill in a real
+  // drive/PT time to show a row. (16 Nov 2026: was "To be confirmed".)
   travelTimes: [
-    { destination: "Raffles Place / CBD", time: "To be confirmed" }, // still not published anywhere — swap for a real drive/PT time when you have it
-    { destination: "Orchard Road", time: "To be confirmed" },
-    { destination: "Changi Airport", time: "To be confirmed" },
+    { destination: "Raffles Place / CBD", time: "" },
+    { destination: "Orchard Road", time: "" },
+    { destination: "Changi Airport", time: "" },
   ],
   tenure: "99 Years, from 8 September 2025", // confirmed — architect brief (more accurate than public microsite)
   possessionTimeline: "Expected Vacant Possession: December 2031", // corrected — architect brief supersedes public microsite's "2029" estimate
   previewDate: "18 September 2026", // matches official site's "Target Preview Date: Q3 2026"
   launchDate: "3 October 2026",
+  // Sales status (Jennifer, 16 Nov 2026). Update both values together.
+  soldPercent: "74.91%",
+  soldAsAt: "16 Nov 2026",
 };
 
 export const heroStats = [
@@ -144,7 +150,7 @@ export const faqs: Faq[] = [
   },
   {
     q: "What financing options are available?",
-    a: "Financing details, including the progressive payment schedule, will be shared closer to preview. Contact us directly for guidance on loan quantum and TDSR/MSR — this depends on your individual financial situation and current MAS rules.", // made launch-safe 31 Aug 2026 — do not state specific TDSR/LTV figures without verifying against current MAS rules
+    a: "Ask us for the progressive payment schedule. Contact us directly for guidance on loan quantum and TDSR/MSR — this depends on your individual financial situation and current MAS rules.", // made launch-safe 31 Aug 2026 — do not state specific TDSR/LTV figures without verifying against current MAS rules
   },
   {
     q: "Can HDB owners buy before selling their flat?",
@@ -155,14 +161,15 @@ export const faqs: Faq[] = [
     a: "Lakeside MRT is a 200m walk (East West Line). Nearby schools include Yuan Ching Secondary, Rulang Primary, Shuqun Primary, and Lakeside Primary — confirm current school proximity eligibility directly with MOE before making a decision based on it.", // confirmed via official microsite; caveat added deliberately
   },
   {
-    q: "How do I register for the VIP preview?",
-    a: "Fill in the registration form above or below — our team will reach out with your preview slot and viewing details.",
+    q: "Is Lucerne Grand still selling?",
+    a: "Yes. Lucerne Grand launched on 3 October 2026 and was 74.91% sold as at 16 Nov 2026. Leave your details or WhatsApp us to check which units are still available and to arrange a viewing.",
   },
 ];
 
 export const salesOffice = {
-  address: "To be announced — contact us for the latest showflat details.", // made launch-safe 31 Aug 2026; swap for the real address once confirmed
-  hours: "To be announced.",
+  address: "Contact us for the showflat location and to arrange a viewing.", // 16 Nov 2026: swap for the real showflat address when you have it
+  hours: "", // hidden on-site while empty
+
   phone: "+65 9679 7083", // confirmed — Lucerne Grand marketing team hotline, from official microsite
   agentName: "Jennifer Wong",
   agentBrand: "@ImJen.Wong",

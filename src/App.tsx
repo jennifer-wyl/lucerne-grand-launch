@@ -8,6 +8,7 @@ import Pricing from "./components/Pricing";
 import WhyChoose from "./components/WhyChoose";
 import Faq from "./components/Faq";
 import Footer from "./components/Footer";
+import { project } from "./content";
 
 function App() {
   return (
@@ -19,8 +20,8 @@ function App() {
         <Gallery />
         <FloorPlans />
         <RegisterCta
-          heading="Join the VIP preview list"
-          subheading="Early access for HDB upgraders — be first to view floor plans and pricing ahead of the public launch."
+          heading={`${project.soldPercent} sold. See what is left.`}
+          subheading="For HDB upgraders: get the remaining units, layouts and prices sent to you, then arrange a viewing."
         />
         <Pricing />
         <WhyChoose />

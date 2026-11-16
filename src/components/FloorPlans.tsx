@@ -27,8 +27,7 @@ export default function FloorPlans() {
         <h2>Unit Types</h2>
         <p className="floor-plans__intro">
           Indicative layouts and sizes only — subject to final survey and change by the
-          developer. Full floor plans are released closer to preview; contact us for the
-          latest version for any unit type.
+          developer. Contact us for the latest version of any unit type.
         </p>
 
         <div className="floor-plans__grid">
@@ -62,7 +61,7 @@ export default function FloorPlans() {
                   rel="noopener noreferrer"
                   className="floor-plans__cta"
                 >
-                  Click Here for Latest Layout
+                  Get Latest Layout
                 </a>
               </div>
             );

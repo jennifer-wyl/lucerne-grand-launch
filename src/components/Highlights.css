@@ -65,3 +65,9 @@
   border: 0;
   display: block;
 }
+
+/* 16 Nov 2026: keyboard focus ring on the map */
+.highlights__map iframe:focus-visible {
+  outline: 2px solid var(--color-navy);
+  outline-offset: 2px;
+}
