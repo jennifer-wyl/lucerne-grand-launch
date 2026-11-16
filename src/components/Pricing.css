@@ -80,3 +80,13 @@
   content: "— ";
   color: var(--color-gold);
 }
+
+/* 16 Nov 2026: one price line replaces the table that repeated the floor plan cards */
+.pricing__from {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  line-height: 1.4;
+  color: var(--color-navy);
+  max-width: 34ch;
+  margin: var(--space-lg) 0 var(--space-xl);
+}

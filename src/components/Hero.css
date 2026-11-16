@@ -90,3 +90,40 @@
   color: #dcc7ab;
   border-color: rgba(220, 199, 171, 0.4);
 }
+
+/* 16 Nov 2026 */
+.hero {
+  min-height: calc(100svh - 77px);
+  display: flex;
+  align-items: center;
+}
+
+.hero__inner {
+  width: 100%;
+}
+
+.hero .section-label {
+  display: inline-block;
+  background: rgba(30, 33, 36, 0.6);
+  padding: 0.35rem 0.75rem;
+  border-radius: var(--radius-sm);
+}
+
+.hero .btn-secondary {
+  background: rgba(30, 33, 36, 0.45);
+}
+
+@media (max-width: 600px) {
+  .hero {
+    min-height: 0;
+  }
+
+  .hero__stats {
+    flex-wrap: nowrap;
+    gap: var(--space-md);
+  }
+
+  .hero__stat-label {
+    font-size: 0.68rem;
+  }
+}

@@ -133,3 +133,14 @@ section {
     padding: var(--space-xl) 0;
   }
 }
+
+/* 16 Nov 2026: section heads big enough to lead their section */
+h2 {
+  font-size: clamp(2rem, 2.4vw + 1rem, 2.75rem);
+  line-height: 1.1;
+  margin-bottom: var(--space-md);
+  text-wrap: balance;
+}
+.section-label {
+  margin-bottom: var(--space-sm);
+}

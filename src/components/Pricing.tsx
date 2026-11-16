@@ -12,28 +12,11 @@ export default function Pricing() {
           our sales team before making any decisions.
         </p>
 
-        <div className="pricing__table-wrap">
-          <table className="pricing__table">
-            <thead>
-              <tr>
-                <th>Unit Type</th>
-                <th>Price From</th>
-              </tr>
-            </thead>
-            <tbody>
-              {unitTypes.map((unit) => (
-                <tr key={unit.type}>
-                  <td>{unit.type}</td>
-                  <td>{unit.priceFrom}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-          <p className="pricing__table-note">
-            See the <a href="#floor-plans">Floor Plans</a> section for indicative unit
-            sizes and layouts.
-          </p>
-        </div>
+        <p className="pricing__from">
+          {unitTypes[0]?.priceFrom.replace(/^From /, "Prices from ")}. Ask for the current
+          price list and the units still available. Sizes and layouts are in the{" "}
+          <a href="#floor-plans">Floor Plans</a> section.
+        </p>
 
         <div className="pricing__columns">
           <div>
